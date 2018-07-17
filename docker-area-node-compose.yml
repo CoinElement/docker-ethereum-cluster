@@ -4,7 +4,6 @@ services:
     build: monitored-geth-client
     restart: on-failure
     links:
-      - bootstrap
       - netstats
     entrypoint: /root/start.sh
     volumes:
