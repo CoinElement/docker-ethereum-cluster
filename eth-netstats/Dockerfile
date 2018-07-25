@@ -6,10 +6,10 @@ RUN git clone https://github.com/cubedro/eth-netstats
 
 WORKDIR /eth-netstats
 
-RUN yarn install
-RUN yarn global add grunt-cli
+RUN npm install
+RUN npm install -g grunt-cli
 RUN grunt
 
 EXPOSE 3000
 
-CMD ["yarn", "start"]
+CMD ["npm", "start"]
