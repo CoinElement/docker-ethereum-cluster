@@ -5,8 +5,8 @@ RUN apk add --update git bash nodejs nodejs-npm perl
 RUN cd /root &&\
     git clone https://github.com/cubedro/eth-net-intelligence-api &&\
     cd eth-net-intelligence-api &&\
-    npm install --registry=https://registry.npm.taobao.org &&\
-    npm install -g pm2 --registry=https://registry.npm.taobao.org
+    npm install &&\
+    npm install -g pm2 
 
 ADD start.sh /root/start.sh
 ADD app.json /root/eth-net-intelligence-api/app.json

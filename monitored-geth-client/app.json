@@ -15,7 +15,7 @@
       "RPC_PORT"        : "8545",
       "LISTENING_PORT"  : "30303",
       "INSTANCE_NAME"   : "XXX",
-      "WS_SERVER"       : "ws://1.1.3.188:3000",
+      "WS_SERVER"       : "ws://18.219.15.186:3000",
       "WS_SECRET"       : "eth-net-stats-secret",
       "VERBOSITY"       : 2
     }
