@@ -1,0 +1,17 @@
+version: '2'
+services:
+  monitored-go-empyrean:
+    build: monitored-go-empyrean
+    restart: on-failure
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+  netstats:
+    build: eth-netstats
+    restart: on-failure
+    container_name: netstats
+    environment:
+      - WS_SECRET=eth-net-stats-secret
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - "3000:3000"

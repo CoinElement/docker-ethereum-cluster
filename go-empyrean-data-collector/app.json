@@ -1,0 +1,23 @@
+[
+  {
+    "name"              : "node-app",
+    "script"            : "app.js",
+    "log_date_format"   : "YYYY-MM-DD HH:mm Z",
+    "merge_logs"        : false,
+    "watch"             : false,
+    "max_restarts"      : 10,
+    "exec_interpreter"  : "node",
+    "exec_mode"         : "fork_mode",
+    "env":
+    {
+      "NODE_ENV"        : "production",
+      "RPC_HOST"        : "172.31.45.37",
+      "RPC_PORT"        : "8545",
+      "LISTENING_PORT"  : "31333",
+      "INSTANCE_NAME"   : "XXX",
+      "WS_SERVER"       : "ws://172.31.45.37:3000",
+      "WS_SECRET"       : "eth-net-stats-secret",
+      "VERBOSITY"       : 2
+    }
+  }
+]
