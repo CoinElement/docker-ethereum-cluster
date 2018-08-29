@@ -1,7 +1,7 @@
 version: '2'
 services:
-  monitored-go-empyrean:
-    build: monitored-go-empyrean
+  go-empyrean-data-collector:
+    build: go-empyrean-data-collector
     restart: on-failure
     volumes:
       - /etc/localtime:/etc/localtime:ro

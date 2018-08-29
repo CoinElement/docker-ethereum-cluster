@@ -8,11 +8,9 @@ RUN cd /root &&\
     npm install &&\
     npm install -g pm2
 
-RUN echo '#!/bin/bash\nset -e\n\ncd /root/eth-net-intelligence-api\n/usr/bin/pm2 start ./app.json\ntail -f \
-    /root/.pm2/logs/node-app-out-0.log' > /root/start.sh
-
+ADD start.sh /root/start.sh
+ADD app.json /root/eth-net-intelligence-api/app.json
 RUN chmod +x /root/start.sh
 
-ADD app.json /root/eth-net-intelligence-api/app.json
 
-ENTRYPOINT /root/start.sh
+ENTRYPOINT ["/root/start.sh"]
